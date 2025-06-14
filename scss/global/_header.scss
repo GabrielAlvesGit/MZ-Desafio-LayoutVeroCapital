@@ -1,0 +1,82 @@
+.header {
+  background-color: $primary-color-green;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 0 16px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__navigation{
+
+    &__nav {
+
+      &__list {
+        display: flex;
+        gap: 32px;
+
+        &__item {
+
+          &__link {
+            color: $primary-color-white;
+            font-size: 16px;
+            font-weight: 400;
+
+            .submenu {
+              color: $primary-color-white;
+              font-size: 16px;
+              font-weight: 400;
+            } 
+          }          
+        }
+      }
+    }
+  }
+
+  &__acess {
+    display: flex;
+    gap: 16px;
+
+    &__form {
+      
+      &__input {
+        opacity: 0;
+      }
+    }
+
+    &__info {
+      
+      &__icon{
+        width: 20px;
+        height: 16px;
+        cursor: pointer;
+        
+        &:hover {
+          > svg, path {
+            fill: $secondary-color-green;
+          }
+        }
+      }
+
+      &__list {
+        display: none;
+
+        &__item{
+          color: $primary-color-white;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 16px;
+          text-transform: uppercase;
+
+          > svg {
+            width: 20px;
+            height: 16px;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
+}

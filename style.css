@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFF;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+button:hover svg, button:hover path {
+  fill: #2DAF7D;
+}
+
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 350px) {
+  .container {
+    max-width: 350px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.header {
+  background-color: #02353C;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+  padding: 16px 0 16px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.header__navigation__nav__list {
+  display: flex;
+  gap: 32px;
+}
+.header__navigation__nav__list__item__link {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header__navigation__nav__list__item__link .submenu {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+}
+.header__acess {
+  display: flex;
+  gap: 16px;
+}
+.header__acess__form__input {
+  opacity: 0;
+}
+.header__acess__info__icon {
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+}
+.header__acess__info__icon:hover > svg, .header__acess__info__icon:hover path {
+  fill: #2DAF7D;
+}
+.header__acess__info__list {
+  display: none;
+}
+.header__acess__info__list__item {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.header__acess__info__list__item > svg {
+  width: 20px;
+  height: 16px;
+  object-fit: contain;
+}
+
+/*# sourceMappingURL=style.css.map */
