@@ -6,6 +6,7 @@
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     flex-direction: row;
   }
 
@@ -18,18 +19,58 @@
         gap: 32px;
 
         &__item {
+          position: relative;
+
+           &:hover {
+              .submenu {
+                opacity: 1;
+                transition: 0.35s all;
+              }
+            }
 
           &__link {
             color: $primary-color-white;
             font-size: 16px;
             font-weight: 400;
+          } 
+          
+           .submenu {
+              display: flex;
+              flex-direction: column;
 
-            .submenu {
-              color: $primary-color-white;
-              font-size: 16px;
-              font-weight: 400;
+              gap: 16px;
+              position: absolute;
+              transform: translateX(-50%,);
+              top: 35px;
+              left: 50%;
+              padding: 16px;
+              background-color: $primary-color-green;
+              border-top: 3px solid $secondary-color-green;
+              border-radius: 0px 0px 0px 6px;
+              transition: 0.45s all;
+              opacity: 0;
+
+              &__item {
+
+                &__link {
+                  display: block;
+                  color: $primary-color-white;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: normal;
+                  padding: 8px;
+                  white-space: nowrap;
+                  transition: 0.35s all;
+                  
+                  &:hover {
+                    background-color: $secondary-color-green;
+                    border-radius: 4px;
+                    width: 100%;
+                    transition: 0.45s all;
+                  }
+                }
+              }
             } 
-          }          
         }
       }
     }
@@ -37,6 +78,8 @@
 
   &__acess {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 16px;
 
     &__form {
@@ -44,13 +87,22 @@
       &__input {
         opacity: 0;
       }
+
+      .search {
+        width: 18px;
+        height: 18px;
+
+        > svg{
+          display: flex;
+        }
+      }
     }
 
     &__info {
       
       &__icon{
-        width: 20px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         cursor: pointer;
         
         &:hover {
@@ -74,6 +126,34 @@
             width: 20px;
             height: 16px;
             object-fit: contain;
+          }
+        }
+      }
+    }
+
+    &__language {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+
+      &::after{
+        content: '';
+        display: flex;
+        width: 20px;
+        height: 16px;
+        background: url(/img/icon/chevron_right.png) no-repeat center center;
+      }
+
+      &__list {
+
+        &__item {
+
+          &__link {
+            color: $primary-color-white;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 16px; 
+            text-transform: uppercase;
           }
         }
       }

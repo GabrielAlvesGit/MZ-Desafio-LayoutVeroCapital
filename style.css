@@ -71,32 +71,75 @@ button:hover svg, button:hover path {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: row;
 }
 .header__navigation__nav__list {
   display: flex;
   gap: 32px;
 }
+.header__navigation__nav__list__item {
+  position: relative;
+}
+.header__navigation__nav__list__item:hover .submenu {
+  opacity: 1;
+  transition: 0.35s all;
+}
 .header__navigation__nav__list__item__link {
   color: #FFF;
   font-size: 16px;
   font-weight: 400;
 }
-.header__navigation__nav__list__item__link .submenu {
+.header__navigation__nav__list__item .submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  transform: translateX(-50%);
+  top: 35px;
+  left: 50%;
+  padding: 16px;
+  background-color: #02353C;
+  border-top: 3px solid #2DAF7D;
+  border-radius: 0px 0px 0px 6px;
+  transition: 0.45s all;
+  opacity: 0;
+}
+.header__navigation__nav__list__item .submenu__item__link {
+  display: block;
   color: #FFF;
   font-size: 16px;
   font-weight: 400;
+  line-height: normal;
+  padding: 8px;
+  white-space: nowrap;
+  transition: 0.35s all;
+}
+.header__navigation__nav__list__item .submenu__item__link:hover {
+  background-color: #2DAF7D;
+  border-radius: 4px;
+  width: 100%;
+  transition: 0.45s all;
 }
 .header__acess {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 16px;
 }
 .header__acess__form__input {
   opacity: 0;
 }
+.header__acess__form .search {
+  width: 18px;
+  height: 18px;
+}
+.header__acess__form .search > svg {
+  display: flex;
+}
 .header__acess__info__icon {
-  width: 20px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 }
 .header__acess__info__icon:hover > svg, .header__acess__info__icon:hover path {
@@ -116,6 +159,25 @@ button:hover svg, button:hover path {
   width: 20px;
   height: 16px;
   object-fit: contain;
+}
+.header__acess__language {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.header__acess__language::after {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 16px;
+  background: url(/img/icon/chevron_right.png) no-repeat center center;
+}
+.header__acess__language__list__item__link {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
