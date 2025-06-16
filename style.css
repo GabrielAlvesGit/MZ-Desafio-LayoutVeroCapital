@@ -11,6 +11,7 @@ html {
 
 body {
   background-color: #FFF;
+  font-family: "Roboto", sans-serif;
 }
 
 li {
@@ -188,15 +189,76 @@ img {
   text-transform: uppercase;
 }
 
-.main .banners {
+.main .pgHome__banners {
   position: fixed;
   top: 0;
   width: 100%;
   height: 832px;
 }
-.main .banners__banner {
+.main .pgHome__banners__slicks {
   width: 100%;
   height: 100%;
+}
+.main .pgHome__banners__slicks .slick-arrow {
+  display: none !important;
+}
+.main .pgHome__banners__slicks__slick {
+  position: relative;
+}
+.main .pgHome__banners__slicks__slick__content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 35%;
+}
+.main .pgHome__banners__slicks__slick__content__title {
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+}
+.main .pgHome__banners__slicks__slick__content__title > mark {
+  color: #393;
+  font-weight: 700;
+  background-color: transparent;
+}
+.main .pgHome__banners__slicks__slick__content__title > span {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+}
+.main .pgHome__banners__slicks__slick__content__text {
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 155%;
+}
+.main .pgHome__banners__slicks .slick-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 50%;
+}
+.main .pgHome__banners__slicks .slick-dots li {
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  background-color: #FFF;
+  border-radius: 50%;
+}
+.main .pgHome__banners__slicks .slick-dots .slick-active {
+  background-color: #393;
 }
 
 /*# sourceMappingURL=style.css.map */
