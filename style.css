@@ -402,7 +402,6 @@ img {
 .pgHome__ourSolutions__title {
   text-align: center;
   color: #02353C;
-  font-family: Sora;
   font-size: 40px;
   font-weight: 600;
   line-height: 136%;
@@ -412,6 +411,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 476px;
 }
 .pgHome__ourSolutions__slicks .slick-track {
   display: flex;
