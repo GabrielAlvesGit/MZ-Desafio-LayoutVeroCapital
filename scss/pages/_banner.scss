@@ -3,12 +3,13 @@
   .pgHome{
 
     &__banners {
-      position: fixed;
-      top: 0;
       width: 100%;
       height: 832px;
+      overflow: hidden;
   
-      &__slicks{
+      &__slicks,
+      .slick-track,
+      .slick-list{
         width: 100%;
         height: 100%;
         
@@ -18,6 +19,8 @@
 
         &__slick {
           position: relative;
+          width: 100%;
+          height: 832px;
 
           &__content {
             position: absolute;
