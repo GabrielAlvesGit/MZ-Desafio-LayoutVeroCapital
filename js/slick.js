@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  /* ==== Banner Home ==== */
   $('.js-slicks').slick({
     dots: true,
     infinite: true,
@@ -9,6 +11,7 @@ $(document).ready(function(){
     // autoplaySpeed: 2000,
   });
 
+  /* ==== Nossas Soluções ==== */
   $('.js-slicks-ourSolutions').slick({
     centerMode: true,
     slidesToShow: 3,
@@ -19,6 +22,16 @@ $(document).ready(function(){
     variableWidth: true,
     adaptiveHeight: true,
   });
+
+  $('.js-slicks-news').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+     speed: 300,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true
+  });
+    
 });
 
 
