@@ -98,12 +98,10 @@
 
       .slick-active:not(.slick-center) {
         transform: scale(1) translateX(200px) !important;
-        background-color: red !important;
       }
 
       .slick-center + .slick-slide {
         transform: scale(1) translateX(-200px) !important;
-        background-color: blue !important;
       }
 
       &__slick {

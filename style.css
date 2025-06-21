@@ -270,7 +270,7 @@ img {
   width: 100%;
   transform: translateX(-50%);
   left: 50%;
-  top: 50%;
+  top: 60%;
 }
 .main .pgHome__banners__slicks .slick-dots li,
 .main .pgHome__banners .slick-track .slick-dots li,
@@ -478,11 +478,9 @@ img {
 }
 .pgHome__ourSolutions__slicks .slick-active:not(.slick-center) {
   transform: scale(1) translateX(200px) !important;
-  background-color: red !important;
 }
 .pgHome__ourSolutions__slicks .slick-center + .slick-slide {
   transform: scale(1) translateX(-200px) !important;
-  background-color: blue !important;
 }
 .pgHome__ourSolutions__slicks__slick__title {
   color: #FFF;
@@ -507,6 +505,7 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   gap: 48px;
 }
 .pgHome__news__top__title {
@@ -549,7 +548,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: inherit;
-  transform: rotate(180deg) translate(-30px, 0px);
+  transform: translate(-8px, 0px);
   width: 41px;
 }
 .pgHome__news__bottom .slick-next,
@@ -557,7 +556,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: inherit;
-  transform: translate(-8px, 0px);
+  transform: rotate(180deg) translate(-30px, 0px);
   width: 41px;
 }
 .pgHome__news__bottom .slick-next::after,
@@ -578,14 +577,14 @@ img {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  width: 274px !important;
-  height: 398px;
+  width: 274px;
+  justify-content: space-between;
 }
 .pgHome__news__bottom__box__img,
 .pgHome__news__bottom .slick-slide__img,
 .pgHome__news .slick-track__box__img,
 .pgHome__news .slick-track .slick-slide__img {
-  width: 274px;
+  width: 100%;
   height: 192px;
   border-radius: 8px;
   overflow: hidden;
@@ -686,6 +685,14 @@ img {
 .pgHome__news .slick-track .slick-slide__btn:hover {
   transition: 0.35s all;
   background-color: #02353C;
+}
+.pgHome__news .slick-active {
+  width: 478px !important;
+  height: 446px !important;
+  transition: all 0.9s ease;
+}
+.pgHome__news .slick-active .pgHome__news__bottom__box__img {
+  height: 240px;
 }
 
 /*# sourceMappingURL=style.css.map */
