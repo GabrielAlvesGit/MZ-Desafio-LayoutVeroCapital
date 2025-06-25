@@ -184,3 +184,29 @@
     }
   }
 }
+
+@media screen and (max-width: 1200px) {
+ .pgHome {
+  
+  &__news {
+    padding: 0;
+
+    .container {
+      padding: 27px 0 115px;
+      bottom: 0;
+    }
+
+    &__bottom {
+      
+      .slick-prev,
+      .slick-next {
+        bottom: -60px;
+        top: initial;
+        background-color: $primary-color-green;
+        left: 50%;
+        right: 50%;
+      }
+    }
+  }
+ }
+}

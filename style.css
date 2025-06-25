@@ -955,4 +955,22 @@ img {
   height: 240px;
 }
 
+@media screen and (max-width: 1200px) {
+  .pgHome__news {
+    padding: 0;
+  }
+  .pgHome__news .container {
+    padding: 27px 0 115px;
+    bottom: 0;
+  }
+  .pgHome__news__bottom .slick-prev,
+  .pgHome__news__bottom .slick-next {
+    bottom: -60px;
+    top: initial;
+    background-color: #02353C;
+    left: 50%;
+    right: 50%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
