@@ -776,6 +776,7 @@ img {
 .pgHome__news__bottom,
 .pgHome__news .slick-track {
   display: flex;
+  height: 446px;
   gap: 32px;
 }
 .pgHome__news__bottom .slick-prev,
@@ -968,8 +969,8 @@ img {
     bottom: -60px;
     top: initial;
     background-color: #02353C;
-    left: 50%;
     right: 50%;
+    left: 50%;
   }
 }
 
