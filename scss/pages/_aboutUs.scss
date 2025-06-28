@@ -126,3 +126,89 @@
     }
   }
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .pgHome {
+    
+    &__aboutUs {
+      padding: 24px 0 34px 0;
+
+      >.container {
+        gap: 31px;
+      }
+
+      &__top {
+        flex-direction: column;
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 16px;
+
+          &__title {
+            font-size: 24px;
+          }
+        }
+
+        &__right {
+          width: 100%;
+        }
+      }
+
+      &__bottom {
+        flex-direction: column;
+        width: 100%;
+
+        &__left {
+          width: 100%;
+
+          &__title {
+            font-size: 28px;
+          }
+        }
+
+        &__right {
+          width: 100%;
+
+          &__list {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            column-gap: 23px;
+            gap: 24px;
+
+            &__item {
+              flex: 1;
+
+              &:nth-child(1) { 
+                  order: 4;
+              }
+
+              &:nth-child(2) { 
+                  order: 1;
+              }
+
+              &:nth-child(3) { 
+                  order: 3;
+              }
+
+              &:nth-child(4) {
+                  order: 2;
+              }
+
+              &:nth-child(5) { 
+                  order: 5;
+              }
+
+              &__link {
+                font-size: 15.375px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

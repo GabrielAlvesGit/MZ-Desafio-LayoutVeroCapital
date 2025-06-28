@@ -126,3 +126,55 @@
     }
   }
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .pgHome {
+
+    &__ourSolutions {
+      padding: 32px 0 99px;
+
+      &__slicks {
+        
+        .slick-prev,
+        .slick-next {
+          top: initial;
+          height: 44px;
+          bottom: -65px;
+          border-radius: 39px;
+          border-radius: 50px 0 0 50px;
+          background-image: url(../../img/icon/arrow.png);
+
+          &::after {
+            content: "";
+            position: absolute;
+            border-left: 1px solid #FFF;
+            height: 27px;
+            top: 23px;
+            right: 0px;
+            transform: translateY(-50%);
+          }
+        }
+
+        .slick-prev {
+          left: initial;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: inherit;
+          transform: translate(-8px, 0px);
+          width: 41px;
+        }
+
+        .slick-next {
+          right: initial;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: inherit;
+          transform: rotate(180deg) translate(-30px, 0px);
+          width: 41px;
+        }
+      }
+    }
+  }
+}
