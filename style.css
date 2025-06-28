@@ -96,6 +96,7 @@ img {
 .header__navigation__nav__list__item:hover .submenu {
   opacity: 1;
   transition: 0.35s all;
+  max-height: max-content;
 }
 .header__navigation__nav__list__item__link {
   color: #FFF;
@@ -108,7 +109,7 @@ img {
   gap: 16px;
   position: absolute;
   transform: translateX(-50%);
-  top: 35px;
+  top: 42px;
   left: 50%;
   padding: 16px;
   background-color: #02353C;
@@ -116,6 +117,8 @@ img {
   border-radius: 0px 0px 0px 6px;
   transition: 0.45s all;
   opacity: 0;
+  overflow: hidden;
+  max-height: 0;
 }
 .header__navigation__nav__list__item .submenu__item__link {
   display: block;
@@ -191,7 +194,38 @@ img {
   line-height: 16px;
   text-transform: uppercase;
 }
-
+.header__menu {
+  display: none;
+  width: 20.025px;
+  height: 24px;
+  cursor: pointer;
+}
+.header__menu:hover {
+  opacity: 0.6;
+  transition: 0.35s all;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .header__navigation {
+    display: none;
+  }
+  .header__navigation.active {
+    display: flex;
+  }
+  .header__menu {
+    display: flex;
+  }
+  .header__menu__img.js-menu-open.active {
+    display: none;
+  }
+  .header__menu__img.js-menu-close {
+    display: none;
+  }
+  .header__menu__img.js-menu-close.active {
+    display: flex;
+  }
+}
 .footer {
   background-color: #02353C;
   padding: 44px 0 0 0;
@@ -843,9 +877,25 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices - 1200px */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .pgHome__ourSolutions {
     padding: 32px 0 99px;
+  }
+  .pgHome__ourSolutions > .container {
+    padding-left: initial;
+    padding-right: initial;
+    margin-left: initial;
+    margin-right: initial;
+    max-width: 100%;
+  }
+  .pgHome__ourSolutions__slicks .slick-track {
+    left: initial;
+  }
+  .pgHome__ourSolutions__slicks .slick-slide {
+    width: 321px !important;
+    overflow: auto;
+    scrollbar-width: none;
+    justify-content: flex-start;
   }
   .pgHome__ourSolutions__slicks .slick-prev,
   .pgHome__ourSolutions__slicks .slick-next {

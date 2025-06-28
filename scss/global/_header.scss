@@ -29,6 +29,7 @@
               .submenu {
                 opacity: 1;
                 transition: 0.35s all;
+                max-height: max-content;
               }
             }
 
@@ -41,11 +42,10 @@
            .submenu {
               display: flex;
               flex-direction: column;
-
               gap: 16px;
               position: absolute;
               transform: translateX(-50%,);
-              top: 35px;
+              top: 42px;
               left: 50%;
               padding: 16px;
               background-color: $primary-color-green;
@@ -53,6 +53,8 @@
               border-radius: 0px 0px 0px 6px;
               transition: 0.45s all;
               opacity: 0;
+              overflow: hidden;
+              max-height: 0;
 
               &__item {
 
@@ -158,6 +160,59 @@
             font-weight: 400;
             line-height: 16px; 
             text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+
+  &__menu {
+    display: none;
+    width: 20.025px;
+    height: 24px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.6;
+      transition: .35s all;
+    }
+
+    &__img {
+
+    }
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For large devices - 1200px */
+@media screen and (max-width: 1200px) {
+  .header {
+    &__navigation {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+
+      
+    &__menu {
+      display: flex;
+
+      &__img {
+
+        &.js-menu-open{
+
+          &.active { 
+            display: none;
+          }
+        }
+
+        &.js-menu-close {
+          display: none;
+
+          &.active { 
+            display: flex;
           }
         }
       }
