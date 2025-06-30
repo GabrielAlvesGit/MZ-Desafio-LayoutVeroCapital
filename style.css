@@ -76,9 +76,12 @@ img {
   top: 0;
   z-index: 1;
   width: 100%;
+  background-color: transparent;
+  padding: 16px 0 16px;
+}
+.header.active {
   background-color: #02353C;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
-  padding: 16px 0 16px;
 }
 .header .container {
   display: flex;
@@ -177,7 +180,7 @@ img {
 }
 .header__acess__language {
   display: flex;
-  align-items: start;
+  align-items: flex-end;
   justify-content: center;
 }
 .header__acess__language::after {
