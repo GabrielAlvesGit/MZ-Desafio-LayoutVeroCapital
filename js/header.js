@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  
+  /* ======== Menu ========*/
 
   $('.js-menu').click(function () {
     $('.js-menu-open').toggleClass('active');
@@ -6,6 +8,8 @@ $(document).ready(function () {
     $('.js-navigation').toggleClass('active');
     $('.js-header').addClass('active');
   });
+
+  /* ======== ScrollUp ========*/
 
   $(window).on('scroll', function () {
     if ($(window).scrollTop() > 1) {
@@ -18,5 +22,4 @@ $(document).ready(function () {
       $('.js-menu-open').removeClass('active');
     }
   })
-
 });

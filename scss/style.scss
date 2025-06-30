@@ -1,10 +1,16 @@
+ /* ======== Base ========*/
 @import "./base/variables";
 @import "./base/reset";
 @import "./base/grid";
+@import "./base/scrollup";
+
+ /* ======== Global ========*/
 @import "./global/header";
 @import "./global/footer";
 
+ /* ======== Pages ========*/
 @import "./pages/banner";
 @import "./pages/aboutUs";
 @import "./pages/ourSolutions";
+@import "./pages/news";
 @import "./pages/news";
