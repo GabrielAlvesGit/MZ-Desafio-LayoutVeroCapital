@@ -611,6 +611,19 @@ img {
     display: none;
   }
 }
+.scrollup {
+  position: fixed;
+  right: 20px;
+  bottom: -100px;
+  background-color: #2DAF7D;
+  padding: 15px 17px;
+  border-radius: 61%;
+  transition: 0.35s all;
+}
+.scrollup.active {
+  bottom: 20px;
+}
+
 /* ======== Pages ========*/
 .pgHome__banners {
   width: 100%;

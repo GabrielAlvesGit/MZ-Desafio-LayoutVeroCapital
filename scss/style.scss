@@ -2,11 +2,12 @@
 @import "./base/variables";
 @import "./base/reset";
 @import "./base/grid";
-@import "./base/scrollup";
+@import "./base/scrollbar";
 
  /* ======== Global ========*/
 @import "./global/header";
 @import "./global/footer";
+@import "./global/scrollup";
 
  /* ======== Pages ========*/
 @import "./pages/banner";
