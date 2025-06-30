@@ -4,13 +4,18 @@ $(document).ready(function () {
     $('.js-menu-open').toggleClass('active');
     $('.js-menu-close').toggleClass('active');
     $('.js-navigation').toggleClass('active');
+    $('.js-header').addClass('active');
   });
 
   $(window).on('scroll', function () {
-    if ($(window).scrollTop() > 50) {
+    if ($(window).scrollTop() > 1) {
       $('.js-header').addClass('active');
     } else {
       $('.js-header').removeClass('active');
+      $('.js-menu').removeClass('active');
+      $('.js-navigation').removeClass('active');
+      $('.js-menu-close').removeClass('active');
+      $('.js-menu-open').removeClass('active');
     }
   })
 
