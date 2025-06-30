@@ -143,7 +143,7 @@ img {
   gap: 16px;
 }
 .header__acess__form__input {
-  opacity: 0;
+  display: none;
 }
 .header__acess__form .search {
   width: 18px;
@@ -194,13 +194,13 @@ img {
   line-height: 16px;
   text-transform: uppercase;
 }
-.header__menu {
+.header__acess__menu {
   display: none;
   width: 20.025px;
   height: 24px;
   cursor: pointer;
 }
-.header__menu:hover {
+.header__acess__menu:hover {
   opacity: 0.6;
   transition: 0.35s all;
 }
@@ -208,21 +208,125 @@ img {
 /* For large devices - 1200px */
 @media screen and (max-width: 1200px) {
   .header__navigation {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: -900px;
+    padding: 16px 24px 8px 15px;
+    opacity: 0;
+    gap: 24px;
   }
   .header__navigation.active {
-    display: flex;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 78%;
+    height: 100vh;
+    background-color: #02353C;
+    opacity: 1;
+    z-index: 3;
+    transition: 0.34s all;
   }
-  .header__menu {
-    display: flex;
+  .header__navigation .header__acess__info {
+    display: block;
   }
-  .header__menu__img.js-menu-open.active {
+  .header__navigation .header__acess__info__list {
+    display: flex;
+    padding: 8px 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: #2DAF7D;
+    border-radius: 100px;
+    gap: 20px;
+  }
+  .header__navigation .header__acess__info__list__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .header__navigation .header__acess__info__list__item__accessibility {
+    display: flex;
+    color: #02353C;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 135%;
+    gap: 8px;
+  }
+  .header__navigation .header__acess__info__list__item__text {
+    color: #02353C;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 135%;
+  }
+  .header__navigation__nav__list {
+    flex-direction: column;
+  }
+  .header__navigation__nav__list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .header__navigation__nav__list__item:hover .header__navigation__nav__list__item__link {
+    color: #2DAF7D;
+  }
+  .header__navigation__nav__list__item:hover .header__navigation__nav__list__item__link::after {
+    background-image: url("../../img/icon/chevronTop.png");
+    transition: 0.35s all;
+    opacity: 8;
+  }
+  .header__navigation__nav__list__item__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px 0 8px;
+  }
+  .header__navigation__nav__list__item__link::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-image: url("../../img/icon/chevronBottom.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: 0.35s all;
+    opacity: 6;
+  }
+  .header__navigation__nav__list__item .submenu {
+    position: initial;
+    transform: translateX(0);
+    border-top: transparent;
+    padding: 0 0 0 16px;
+    margin: 0 0 0 16px;
+    gap: 0;
+  }
+  .header__navigation__nav__list__item .submenu__item {
+    list-style: initial;
+  }
+  .header__navigation__nav__list__item .submenu__item::marker {
+    color: #FFF;
+  }
+  .header__navigation__nav__list__item .submenu__item__link {
+    font-size: 14px;
+  }
+  .header__acess__info {
     display: none;
   }
-  .header__menu__img.js-menu-close {
+  .header__acess__menu {
+    display: flex;
+  }
+  .header__acess__menu__img.js-menu-open.active {
     display: none;
   }
-  .header__menu__img.js-menu-close.active {
+  .header__acess__menu__img.js-menu-close {
+    display: none;
+  }
+  .header__acess__menu__img.js-menu-close.active {
     display: flex;
   }
 }
@@ -803,7 +907,6 @@ img {
   width: 39px;
   height: 39px;
   border-radius: 39px;
-  z-index: 2;
   cursor: pointer;
   background-color: #02353C;
   text-indent: -9999px;
